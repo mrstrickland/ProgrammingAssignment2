@@ -1,6 +1,6 @@
 ## The makeCacheMatrix function creates a list of 4 functions set, get, setinv and getinv.
-## set - sets the value of the matrix, get - gets the value of the matrix,
-## setinv - sets the value of the inverse matrix and getinv gets the value of the inverse matrix
+## set - sets the value of the matrix throughout the makeCacheMatrix function, get - gets the value of the matrix,
+## setinv - sets the value of the inverse matrix throughout the makeCacheMatrix function and getinv gets the value of the inverse matrix
 
 makeCacheMatrix <- function(x = matrix()) {
 	inv<-NULL	##Creates the inv value and sets it to NULL
@@ -26,7 +26,7 @@ cacheSolve <- function(x, ...) {
     if(!is.null(inv)) { ##Tests whether inv is not the value NULL - if this is the case if retrieves the value from 
 	                    ##the cache as it has already been calculated.
             message("retrieving cache data")
-            return(inv) ##Returns the value of the inverse from the Cache
+            return(inv) ##Returns the value of the inverse.
             }
     data <- x$get() ##If the inverse is not already in the cache, use the x$get() function to get the value of the matrix x, 
 	                ##originally entered into makeCacheMatrix, assigning it to variable data.
